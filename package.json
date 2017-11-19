@@ -13,7 +13,8 @@
     "clean": "./node_modules/.bin/rimraf dist lib",
     "lint": "./node_modules/eslint/bin/eslint.js --fix .",
     "build_app": "concurrent --kill-others & npm run clean & npm run lint & npm run build & npm run sass & npm run clean-css",
-    "buildc": "better-npm-run build_client"
+    "buildc": "better-npm-run build_client",
+    "install": "npm run build_app"
   },
   "eslintConfig": {
     "root": true
@@ -23,7 +24,7 @@
       "command": "./node_modules/.bin/webpack-dev-server --hot --inline --config webpack/development.js",
       "env": {
         "NODE_ENV": "development",
-        "NODE_PORT": 3000
+        "NODE_PORT": 3008
       }
     },
     "build_client": {
